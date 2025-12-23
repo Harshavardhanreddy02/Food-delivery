@@ -1,15 +1,5 @@
 #  Delish - Food Delivery Website
 
-**Group Number:** 23  
-**Team Members:**  
-- John Michael (S20220010054)  
-- Rishika (S20220010211)  
-- Aneesh (S20220010016)  
-- Rahul Tarachand (S20220010223)  
-- Mohiuddin (S20220010199)
-
----
-
 ##  Project Overview
 
 Delish is a full-stack food delivery web application that enables users to discover, order food, and manage their food preferences seamlessly. The application also includes distinct dashboards for restaurant partners and admins, enabling robust food item management and order tracking. Built using modern web technologies (React, Node.js, MongoDB), it offers a dynamic and responsive user experience across all platforms.
