@@ -60,15 +60,6 @@ Delish is a full-stack food delivery web application that enables users to disco
 
 ---
 
-##  How to Run the Project
-
-###  Option 1: Manual (Local) Setup
-
-#### Clone the repo
-```bash
-git clone https://github.com/JohnMichael0311/DELISH_APP.git
-cd DELISH_APP
-````
 
 ####  Backend Setup
 
@@ -174,14 +165,6 @@ docker-compose up --build
 * Configured with **GitHub Actions**
 * Runs linting, tests, and deployment automatically.
 
-###  Deployment
-
-* **Frontend**: [Deployed on Vercel](https://vercel.com/)
-* **Backend**: Deployed via Render or Railway
-* All features functional in deployed environment.
-
----
-
 ##  B2B and B2C in Delish
 
 ###  B2B (Business to Business)
@@ -212,17 +195,3 @@ docker-compose up --build
 * Push notifications (web/mobile)
 * Dynamic pricing/offers system for restaurants
 
----
-
-##  License
-
-This project is licensed under the **MIT License**.
-
----
-
-##  Repository
-
-[GitHub - DELISH\_APP](https://github.com/JohnMichael0311/delishAPP)
-
-```
-# Food-delivery
