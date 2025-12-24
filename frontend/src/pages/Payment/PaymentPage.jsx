@@ -35,7 +35,7 @@ export default function PaymentPage() {
 
     try {
       // Create payment intent via backend
-      const res = await axios.post('http://localhost:5000/api/payment/create-payment-intent', {
+      const res = await axios.post('/api/payment/create-payment-intent', {
         amount: order.totalPrice * 100, // Stripe expects cents
       });
 

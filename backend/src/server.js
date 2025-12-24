@@ -514,9 +514,26 @@ app.use(
 app.use(morgan('dev'));
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(express.json());
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://food-delivery-nu-blond.vercel.app',
+  'https://food-delivery-nu-blond.vercel.app/'
+];
+
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3000'],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.urlencoded({ extended: true }));
 

@@ -3,7 +3,17 @@ import { Link } from 'react-router-dom';
 import Price from '../Price/Price';
 import StarRating from '../StarRating/StarRating';
 import classes from './thumbnails.module.css';
-export default function Thumbnails({ foods }) {
+export default function Thumbnails({ foods = [] }) {
+  // Ensure foods is an array before mapping
+  if (!Array.isArray(foods)) {
+    console.error('Thumbnails component expected an array but received:', foods);
+    return <div>No food items available</div>;
+  }
+
+  if (foods.length === 0) {
+    return <div>No food items found</div>;
+  }
+
   return (
     <ul className={classes.list}>
       {foods.map(food => (

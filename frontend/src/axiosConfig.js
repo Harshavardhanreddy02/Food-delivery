@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 // Set base URL based on environment
-// Use relative baseURL for all environments except explicit local development
 const isLocalDev = window.location.hostname === 'localhost' && window.location.port === '3000';
-const baseURL = isLocalDev ? 'http://localhost:5000' : '/';
+// Use production backend URL for all environments
+const baseURL = isLocalDev ? 'http://localhost:5000' : 'https://food-delivery-x5fb.onrender.com';
 axios.defaults.baseURL = baseURL;
 
 // Add request interceptor for debugging
